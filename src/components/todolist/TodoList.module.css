@@ -1,0 +1,40 @@
+ul {
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    align-content: center;
+    padding: 0;
+    margin: 3vh 2vw;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todoList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.list {
+    border: 2px solid gray;
+    border-radius: 2%;
+    width: 33vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0 35px 0;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"; // import state and hooks
 import styles from './TodoList.module.css'; // import css module
+import Clock from '../clock/Clock';
 
 export default function TodoList() {
     const [ todolist, setList ] = useState([]); // state initialization for the whole todo list
@@ -36,12 +37,17 @@ export default function TodoList() {
 
     // state setter function for adding a newTask to the previous todolist
     function addToList() {
+        if(!newTask.trim()) return;
         setList((prevList) => ( [ ...prevList, { task: newTask } ] ))
         setNewTask("")
     }
     // deletion function which resets todolist state based on the filtered previous todolist where the index passed from the delete button is not included in the new todolist 
     function deleteFromList(idToDelete) {
-        setList((prevList) => ( prevList.filter((task, i) => i !== idToDelete )))
+        setList((prevList) => {
+            const updatedList = prevList.filter((task, i) => i !== idToDelete );
+            localStorage.setItem("tasks", JSON.stringify(updatedList));
+            return updatedList;
+        })
     }
 
     // function for automatically updating newTask everytime there is a change in the input element
@@ -69,16 +75,22 @@ export default function TodoList() {
 
     return (
         <div className={styles.todoList}>
-            <p>{new Date().toLocaleTimeString()}</p>
+            <Clock />
             <h1>To Do List</h1>
             <div className={styles.list}>
                 <ul>
-                    {todolist.map((task, index) => 
-                    <li key={index}>
-                        <input type="checkbox" />
-                        {task.task}
-                        <button onClick={() => deleteFromList(index)}>Delete</button>
-                    </li>
+                    {todolist.length > 0 ? (
+                        todolist.map((task, index) => (
+                        <li key={index}>
+                            <div>
+                                <input type="checkbox" />
+                                {task.task}
+                            </div>
+                            <button onClick={() => deleteFromList(index)}>Delete</button>
+                        </li>
+                        )) 
+                    ) : (
+                        <p>Add some new tasks ...</p>
                     )}
                 </ul>
             </div>
