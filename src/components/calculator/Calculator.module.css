@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc {
+    width: 470px;
+    height: 600px;
+    border: 1px solid;
+    border-radius: 3%;
+    display: grid;
+    grid-template-columns: 0.3fr repeat(5, 1fr) 0.3fr;
+    grid-template-rows: 0.3fr repeat(7, 1fr) 0.3fr;
+    gap: 10px;
+    
+}
+
+.example {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+    height: 35px;
+}
+
+.calc button {
+    font-size: 15px;
+}
+
+.calc button:active {
+    background-color: darkgrey;
+}
+
+.addition, .subtraction, .multiplication, .division, .clear,
+.num1, .num2, .num3, .num4, .num5, .num6, .num7, .num8, .num9, .num0, 
+.enter {
+    border: 1px solid;
+    border-radius: 7%;
+}
+/* output element*/
+.output {
+    grid-column: 2 / 7;
+    grid-row: 2 / 4;
+    border: 1px solid;
+    border-radius: 2%;
+    background-color: rgb(236, 236, 236);
+}
+
+.output p {
+    margin: 35px;
+}
+
+/* columns */
+.addition, .subtraction, .multiplication, .division {
+    grid-column: 2 / 3;
+}
+
+.num1, .num4, .num7, .clear {
+    grid-column: 4 / 5;
+}
+
+.num2, .num5, .num8, .num0 {
+    grid-column: 5 / 5;
+}
+
+.num3, .num6, .num9, .enter {
+    grid-column: 6 / 7
+}
+
+/* rows */
+
+.addition, .num1, .num2, .num3 {
+    grid-row: 4 / 5;
+}
+
+.subtraction, .num4, .num5, .num6 {
+    grid-row: 5 / 6;
+}
+
+.multiplication, .num7, .num8, .num9 {
+    grid-row: 6 / 7;
+}
+
+.division, .clear, .num0, .enter {
+    grid-row: 7 / 8;
+}

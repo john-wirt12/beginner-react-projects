@@ -1,4 +1,15 @@
-ul {
+/*
+    Take note of the name of the end of the file name 'TodoList.module.css'. Using the ending 'module.css'
+    allows the css file to be exported/imported as an module insteading of using traditional ES6 import/export
+    syntax. The difference is that when the file is imported it will only apply the styles to the component that
+    is in that specific file's return statement versus using ES6 syntax which will apply the css to the entire page.
+    
+    If you inspect 'TodoList.js' you will see the styles applied to the files component through use of the object
+    variable 'styles' (ex: <div className={styles.todolist}>). The styles are also applied to the component in 
+    the css files using element selectors (ex: ul {}).
+*/
+
+.ul {
     display: flex;
     width: 30vw;
     flex-direction: column;
@@ -7,14 +18,14 @@ ul {
     margin: 3vh 2vw;
 }
 
-li {
+.li {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
 }
 
-li div {
+.liDiv {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,4 +48,10 @@ li div {
     align-items: center;
     justify-content: center;
     margin: 5px 0 35px 0;
+}
+
+.addTask {
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
 }

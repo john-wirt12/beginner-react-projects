@@ -76,13 +76,13 @@ export default function TodoList() {
     return (
         <div className={styles.todoList}>
             <Clock />
-            <h1>To Do List</h1>
+            <h1 className={styles.h1}>To Do List</h1>
             <div className={styles.list}>
-                <ul>
+                <ul className={styles.ul}>
                     {todolist.length > 0 ? (
                         todolist.map((task, index) => (
-                        <li key={index}>
-                            <div>
+                        <li key={index} className={styles.li}>
+                            <div className={styles.liDiv}>
                                 <input type="checkbox" />
                                 {task.task}
                             </div>
@@ -94,7 +94,7 @@ export default function TodoList() {
                     )}
                 </ul>
             </div>
-            <div>
+            <div className={styles.addTask}>
                 <input 
                     type="text" 
                     name="newTask" 
