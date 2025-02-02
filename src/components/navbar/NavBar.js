@@ -20,6 +20,9 @@ export default function NavBar() {
                     <li>
                         <NavLink to="randomMessage">Quote Generator</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="weather">Weather</NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>

@@ -3,7 +3,7 @@ import styles from './RandomMessage.module.css'
 
 export default function RandomMessage() {
     const url = 'https://api.api-ninjas.com/v1/quotes';
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiKey = process.env.REACT_APP_QUOTE_API_KEY;
 
     const [ data, setData ] = useState(null);
     const [ loading, setLoading ] = useState(true);
