@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 10;
     border-bottom: 1px solid gray;
+    background-color: white;
 }
 
 .h1 {

@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 227, 198);
+}
+
+.quoteBox {
+    width: 600px;
+    height: 500px;
+    margin-top: 35px;
+    background-color: rgba(255, 0, 76, 0.85);
+    box-shadow: 10px 10px 10px rgb(170, 0, 76), 5px 5px 5px rgb(190, 0, 76), 5px -1px 5px rgb(190, 0, 76);
+    border: 3px solid rgba(255, 0, 76, 0.98);
+    color: white;
+    font-size: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    width: 80%;
+    margin: 10px 5px 2px 5px;
+    text-align: center;
+    line-height: 1.4;
+
+}
+
+.author {
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-right: 7px;
+}
+
+.category {
+    margin-top: 35px;
+}
+
+
+
+.newQuoteButton {
+    border: none;
+    background-color: rgba(255, 0, 76, 0.781);
+    border: 1px solid rgba(255, 0, 76, 0.98);
+    box-shadow: 5px 5px 5px rgb(170, 0, 76), 2px 2px 2px rgb(190, 0, 76), 2px -1px 2px rgb(190, 0, 76);
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 15% / 50%;
+    margin-top: 55px;
+}

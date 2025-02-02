@@ -17,6 +17,9 @@ export default function NavBar() {
                     <li>
                         <NavLink to="calculator">Calculator</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="randomMessage">Quote Generator</NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>

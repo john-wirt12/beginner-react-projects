@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } 
 import Root from './root';
 import Increment from './components/incrementer/Incrementer';
 import Calculator from './components/calculator/Calculator';
+import RandomMessage from './components/randmessage/RandomMessage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
       <Route path="todolist" element={ <TodoList /> } />
       <Route path="increment" element={ <Increment /> } />
       <Route path="calculator" element={ <Calculator /> } />
+      <Route path="RandomMessage" element={ <RandomMessage />} />
     </Route>
 ))
 
