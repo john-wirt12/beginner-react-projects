@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
-import TodoList from './components/todolist/TodoList'; // importing child component
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import './App.css';
 import Root from './root';
+import TodoList from './components/todolist/TodoList'; // importing child component
 import Increment from './components/incrementer/Incrementer';
 import Calculator from './components/calculator/Calculator';
 import RandomMessage from './components/quote_generator/RandomMessage';
